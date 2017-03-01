@@ -25,7 +25,7 @@ Compare: addi $sp, $sp, -4      # Adjust sp for room to back up main return addr
 Skip:    addi $v0, $zero, 0     # return 0, because A < B
          lw   $ra, 0($sp)       # Recover main returning address
          addi $sp, $sp, 4       # Adjust stack back
-	 jr   $ra               # Go to main
+         jr   $ra               # Go to main
 
 Sub:     sub $v0, $a0, $a1      # Subtrack A - B
          jr  $ra                # Return to Compare
